@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:flutter_application/Views/Screens/Search_Page.dart';
 import 'package:flutter_application/Views/Widgets/Dropdown.dart';
 import 'package:flutter_application/Views/Widgets/VideoPlayer.dart';
 import '../../Services/Networking.dart';
@@ -54,7 +55,7 @@ class _HomeState extends State<Home> {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.all(8.0),
+                    padding: const EdgeInsets.only(top: 20.0),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: [
@@ -84,9 +85,18 @@ class _HomeState extends State<Home> {
                                             fit: BoxFit.fill,
                                           )),
                                     ),
-                                    Icon(
-                                      Icons.search,
-                                      color: Colors.white,
+                                    GestureDetector(
+                                      onTap: () {
+                                        Navigator.push(context,
+                                            MaterialPageRoute(
+                                                builder: (context) {
+                                          return Search();
+                                        }));
+                                      },
+                                      child: Icon(
+                                        Icons.search,
+                                        color: Colors.white,
+                                      ),
                                     ),
                                   ],
                                 ),

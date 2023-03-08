@@ -22,7 +22,7 @@ class _VideoState extends State<Video> {
 
   @override
   void dispose() {
-    _controller.dispose(); // TODO: implement dispose
+    //_controller.dispose(); // TODO: implement dispose
     super.dispose();
   }
 
