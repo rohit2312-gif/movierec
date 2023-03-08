@@ -38,7 +38,7 @@ Future getCrime() async {
   List responseBody = jsonDecode(response.body)["results"] as List;
   List<Movie_Api> results = [];
   responseBody.forEach((movie) => results.add(Movie_Api.fromJson(movie)));
-  print(results[0].title);
+  //print(results[0].title);
   return results;
 }
 
@@ -50,7 +50,7 @@ Future getTop() async {
   List responseBody = jsonDecode(response.body)["results"] as List;
   List<Movie_Api> results = [];
   responseBody.forEach((movie) => results.add(Movie_Api.fromJson(movie)));
-  print(results[0].title);
+//  print(results[0].title);
   return results;
 }
 //getData();
